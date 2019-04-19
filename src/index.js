@@ -8,8 +8,9 @@ import { HttpLink } from 'apollo-link-http';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import { API_URL } from './utils/constants'
 
+const token = 'xxx';
 const client = new ApolloClient({
-    link: new HttpLink({ uri: API_URL, headers: { authorization: 'bearer b5b7d63ac7b06082ffbf9d698acc2d02bf768d9e' } }),
+    link: new HttpLink({ uri: API_URL, headers: { authorization: `bearer ${token}` } }),
     cache: new InMemoryCache(),
 });
 
